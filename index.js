@@ -24,7 +24,7 @@ app.get('/api/:dimensao([0-9]+[xX][0-9]+)/:primo(\\d+|)', (req, res) => {
 
 })
 
-let porta = process.env.PORT || 8080
+let porta = process.env.PORT || 7777
 app.listen(porta)
 
 function tratarDados(dimensaoRaw, primoRaw){
