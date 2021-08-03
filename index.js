@@ -24,7 +24,8 @@ app.get('/api/:dimensao([0-9]+[xX][0-9]+)/:primo(\\d+|)', (req, res) => {
 
 })
 
-app.listen(process.env.PORT)
+let porta = process.env.PORT || 8080
+app.listen(porta)
 
 function tratarDados(dimensaoRaw, primoRaw){
   const [larguraTexto, alturaTexto] = dimensaoRaw.split('x') || dimensaoRaw.split('X')
